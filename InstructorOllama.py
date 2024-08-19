@@ -8,6 +8,7 @@ from openai import OpenAI
 from ollama import Client
 from server import PromptServer # type: ignore[import]
 from aiohttp import web
+from textwrap import dedent
 
 routes = PromptServer.instance.routes
 @routes.post('/ollama/get_models')
@@ -87,11 +88,14 @@ class OllamaInstructorNode:
 
             # Convert the response to a JSON string
             result = json.dumps(response.dict(), indent=2)
-            docs = """
+            docs = dedent(f"""
                 "Instructor: https://python.useinstructor.com/",
                 "Pydantic: https://docs.pydantic.dev/latest/",
                 "Instructor Ollama Node: https://github.com/thismodernday/ComfyUI-InstructorOllama"
-            """
+
+                Pydantic models are stored in the `models` directory. Each model should be a separate Python file with a Pydantic model that inherits from `BaseModel`.
+                you can copy paste this path: {os.path.join(os.path.dirname(__file__), "models")} into your file browser.
+            """)
             return (result, docs)
 
         except Exception as e:
