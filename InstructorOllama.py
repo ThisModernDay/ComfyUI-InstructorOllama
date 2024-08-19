@@ -35,7 +35,8 @@ class OllamaInstructorNode:
             },
         }
 
-    RETURN_TYPES = ("STRING",)
+    RETURN_TYPES = ("STRING", "STRING")
+    RETURN_NAMES = ("Response", "Docs")
     FUNCTION = "generate_structured_output"
     CATEGORY = "Instructor/Ollama"
 
@@ -86,7 +87,12 @@ class OllamaInstructorNode:
 
             # Convert the response to a JSON string
             result = json.dumps(response.dict(), indent=2)
-            return (result,)
+            docs = """
+                "Instructor: https://python.useinstructor.com/",
+                "Pydantic: https://docs.pydantic.dev/latest/",
+                "Instructor Ollama Node: https://github.com/thismodernday/ComfyUI-InstructorOllama"
+            """
+            return (result, docs)
 
         except Exception as e:
             raise Exception(f"Failed to generate output after {max_retries} attempts: {str(e)}")
