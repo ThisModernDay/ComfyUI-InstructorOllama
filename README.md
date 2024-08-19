@@ -25,6 +25,8 @@ The way the node currently works it looks for the python file in the folder (thi
 
 ### Example Pydantic Model
 ```Python
+from pydantic import BaseModel, Field
+
 class User(BaseModel):
     first_name: str
     last_name: str
