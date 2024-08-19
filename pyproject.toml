@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-instructorollama"
+description = "Custom ComfyUI Nodes for interacting with [a/Ollama](https://ollama.com/) using the [a/Instructor](https://github.com/jxnl/instructor).\nIntegrate the power of LLMs into CompfyUI workflows easily with structured output."
+version = "0.0.1"
+license = { file = "LICENSE" }
+dependencies = ["ollama","instructor","openai","pydantic"]
+
+[project.urls]
+Repository = "https://github.com/thismodernday/comfyui-instructorollama"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "thismodernday"
+DisplayName = "comfyui-instructorollama"
+Icon = ""

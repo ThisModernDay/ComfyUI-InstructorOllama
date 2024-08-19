@@ -1,0 +1,4 @@
+ollama
+instructor
+pydantic
+openai
