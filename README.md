@@ -5,6 +5,14 @@ Custom [ComfyUI](https://github.com/comfyanonymous/ComfyUI) Nodes for interactin
 To use this properly, you would need a running Ollama server reachable from the host that is running ComfyUI.
 
 
+## Installation
+
+1. git clone into the ```custom_nodes``` folder inside your ComfyUI installation or download as zip and unzip the contents to ```custom_nodes/ComfyUI-InstructorOllama```.
+2. `pip install -r requirements.txt`
+3. Start/restart ComfyUI
+
+
+
 ## Nodes
 
 Ollama Instructor Node
