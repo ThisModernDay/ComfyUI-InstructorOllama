@@ -1,6 +1,6 @@
 # ComfyUI Instructor Ollama
 
-Custom [ComfyUI](https://github.com/comfyanonymous/ComfyUI) Nodes for interacting with [Ollama](https://ollama.com/) using the [Instructor](https://github.com/ollama/ollama-python). Library to provide structured output from your LLM
+Custom [ComfyUI](https://github.com/comfyanonymous/ComfyUI) Nodes for interacting with [Ollama](https://ollama.com/) using the [Instructor](https://github.com/jxnl/instructor). Library to provide structured output from your LLM
 
 To use this properly, you would need a running Ollama server reachable from the host that is running ComfyUI.
 
